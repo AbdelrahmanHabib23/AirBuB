@@ -13,16 +13,21 @@ const MobileSearch = () => {
         p: '2px 4px',
         display: 'flex',
         alignItems: 'center',
-        width: 400,
+        width: { xs: '100%', sm: 'auto' }, // Full width on small screens, auto on larger screens
         border: '1px solid #ccc',
         borderRadius: 20,
+        boxShadow: 1, // Optional: Add shadow for better visual separation
       }}
     >
-      <IconButton sx={{ p: '10px' }}>
+      <IconButton sx={{ p: '10px' }} aria-label="search">
         <FaSearch />
       </IconButton>
-      <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Where to?" />
-      <IconButton type="submit" sx={{ p: '10px' }}>
+      <InputBase
+        sx={{ ml: 1, flex: 1 }}
+        placeholder="Where to?"
+        inputProps={{ 'aria-label': 'search input' }} // Accessibility improvement
+      />
+      <IconButton type="submit" sx={{ p: '10px' }} aria-label="settings">
         <VscSettings />
       </IconButton>
     </Paper>

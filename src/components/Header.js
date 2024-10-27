@@ -28,13 +28,13 @@ const Header = () => {
             px: 4,
           }}
         >
-          <Box sx={displayOnDesktop}>
+          <Box sx={{ ...displayOnDesktop, display: { xs: 'none', sm: 'block' } }}>
             <Logo />
           </Box>
-          <Box sx={displayOnDesktop}>
+          <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
             <LocationSearch />
           </Box>
-          <Box sx={displayOnDesktop}>
+          <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
             <ProfileSettings />
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
